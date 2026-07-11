@@ -1,4 +1,4 @@
-import { useRef, useState, HTMLAttributes, ReactNode, MouseEvent } from 'react'
+import { useRef, HTMLAttributes, ReactNode, MouseEvent } from 'react'
 import { motion, useMotionValue, useSpring, useTransform, MotionProps } from 'framer-motion'
 
 // Combine HTML attributes with Motion props, omitting conflicting ones

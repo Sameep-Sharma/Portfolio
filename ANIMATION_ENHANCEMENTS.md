@@ -12,10 +12,10 @@ Your portfolio has been enhanced with modern animations, smooth transitions, and
 
 Features:
 - Large animated "END" text with staggered letter animations
-- Your name "HOZAIFA ALI" in gradient with animated gradient colors
+- Your name "Sameep Sharma" in gradient with animated gradient colors
 - Animated decorative elements (✦ symbols) with wave animations
 - Animated background with floating gradient blobs
-- Pulsing heart animation with "Made with ❤️ by Hozaifa Ali"
+- Pulsing heart animation with "Made with ❤️ by Sameep Sharma"
 - Smooth scroll animations when footer comes into view
 - Responsive design for all screen sizes
 
@@ -155,7 +155,7 @@ To customize animations:
 1. **Footer Text**: Edit `Footer.tsx` and change:
    ```tsx
    const endText = "END"
-   const nameText = "HOZAIFA ALI"
+   const nameText = "Sameep Sharma"
    ```
 
 2. **Animation Speed**: Adjust `transition` duration in component

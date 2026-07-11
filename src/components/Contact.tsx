@@ -26,7 +26,7 @@ const Contact = () => {
 
     // REPLACE THIS URL WITH YOUR OWN FORMSPREE ENDPOINT
     // Example: https://formspree.io/f/xyzkqwer
-    const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mpqwakjp'
+    const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xnjkjlqa'
 
     try {
       const response = await fetch(FORMSPREE_ENDPOINT, {
@@ -55,21 +55,21 @@ const Contact = () => {
 
   const contactInfo = [
     {
-      icon: <Mail className="text-brand-green" size={20} />,
+      icon: <Mail className="text-brand-purple" size={20} />,
       label: 'Email',
-      value: 'hozaifaa095@gmail.com',
-      link: 'mailto:hozaifaa095@gmail.com',
+      value: 'sharmasameep94@gmail.com',
+      link: 'mailto:sharmasameep94@gmail.com',
     },
     {
-      icon: <Github className="text-brand-green" size={20} />,
+      icon: <Github className="text-brand-purple" size={20} />,
       label: 'GitHub',
-      value: 'hozi8-web3',
-      link: 'https://github.com/hozi8-web3',
+      value: 'Sameep-Sharma',
+      link: 'https://github.com/Sameep-Sharma',
     },
     {
-      icon: <MapPin className="text-brand-green" size={20} />,
+      icon: <MapPin className="text-brand-purple" size={20} />,
       label: 'Location',
-      value: 'Lahore, Pakistan',
+      value: 'Tumakuru,Karnataka,India',
       link: null,
     },
   ]
@@ -86,9 +86,9 @@ const Contact = () => {
         >
           <div className="flex items-center gap-4 mb-6">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-mono font-bold tracking-widest text-gray-900 dark:text-white uppercase text-shadow-retro">
-              Get In <span className="text-emerald-500">Touch</span>
+              Get In <span className="text-purple-500">Touch</span>
             </h2>
-            <div className="h-1 flex-1 max-w-24 bg-gray-900 dark:bg-emerald-500" />
+            <div className="h-1 flex-1 max-w-24 bg-gray-900 dark:bg-purple-500" />
           </div>
           <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-4xl">
             Have a project in mind or want to collaborate? I'd love to hear from you.
@@ -105,7 +105,7 @@ const Contact = () => {
             className="space-y-6"
           >
             <div className="retro-card p-6 sm:p-8">
-              <h3 className="text-xl font-mono font-bold uppercase tracking-wider mb-8 text-gray-900 dark:text-white border-b-2 border-gray-900 dark:border-emerald-500 pb-2">Contact Information</h3>
+              <h3 className="text-xl font-mono font-bold uppercase tracking-wider mb-8 text-gray-900 dark:text-white border-b-2 border-gray-900 dark:border-purple-500 pb-2">Contact Information</h3>
               <div className="space-y-6">
                 {contactInfo.map((info, index) => (
                   <motion.div
@@ -116,7 +116,7 @@ const Contact = () => {
                     transition={{ delay: index * 0.1, duration: 0.5 }}
                     className="flex items-center gap-4 group"
                   >
-                    <div className="p-3 bg-[#f4f4f0] dark:bg-[#111] border-2 border-gray-900 dark:border-emerald-500 shadow-[2px_2px_0px_rgba(17,24,39,1)] group-hover:shadow-[4px_4px_0px_rgba(17,24,39,1)] group-hover:-translate-y-1 transition-all rounded-none flex-shrink-0">{info.icon}</div>
+                    <div className="p-3 bg-[#f4f4f0] dark:bg-black border-2 border-gray-900 dark:border-purple-500 shadow-[2px_2px_0px_rgba(17,24,39,1)] group-hover:shadow-[4px_4px_0px_rgba(17,24,39,1)] group-hover:-translate-y-1 transition-all rounded-none flex-shrink-0">{info.icon}</div>
                     <div>
                       <p className="text-gray-500 dark:text-gray-400 text-xs font-mono uppercase tracking-widest mb-1.5 font-bold">{info.label}</p>
                       {info.link ? (
@@ -124,7 +124,7 @@ const Contact = () => {
                           href={info.link}
                           target={info.link.startsWith('http') ? '_blank' : undefined}
                           rel={info.link.startsWith('http') ? 'noopener noreferrer' : undefined}
-                          className="text-gray-900 dark:text-white hover:text-emerald-500 font-mono transition-colors text-lg font-bold"
+                          className="text-gray-900 dark:text-white hover:text-purple-500 font-mono transition-colors text-lg font-bold"
                         >
                           {info.value}
                         </a>
@@ -138,10 +138,10 @@ const Contact = () => {
             </div>
 
             <div className="retro-card p-6 sm:p-8">
-              <h3 className="text-xl font-mono font-bold uppercase tracking-wider mb-6 text-gray-900 dark:text-white border-b-2 border-gray-900 dark:border-emerald-500 pb-2">Education</h3>
-              <p className="text-emerald-500 text-xl font-mono uppercase tracking-tight font-bold mb-2">Software Engineering</p>
-              <p className="text-gray-900 dark:text-gray-100 font-mono font-bold text-lg">UET Lahore</p>
-              <p className="text-gray-700 dark:text-gray-400 text-sm mt-3 font-mono">Lahore, Pakistan</p>
+              <h3 className="text-xl font-mono font-bold uppercase tracking-wider mb-6 text-gray-900 dark:text-white border-b-2 border-gray-900 dark:border-purple-500 pb-2">Education</h3>
+              <p className="text-purple-500 text-xl font-mono uppercase tracking-tight font-bold mb-2">Information Science and Engineering(2024-28)</p>
+              <p className="text-gray-900 dark:text-gray-100 font-mono font-bold text-lg">Siddaganga Institute of Technology</p>
+              <p className="text-gray-700 dark:text-gray-400 text-sm mt-3 font-mono">Tumakuru, Karnataka, India</p>
             </div>
           </motion.div>
 
@@ -153,19 +153,19 @@ const Contact = () => {
             transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
             className="retro-card p-6 sm:p-8"
           >
-            <h3 className="text-xl font-mono font-bold uppercase tracking-wider mb-8 text-gray-900 dark:text-white border-b-2 border-gray-900 dark:border-emerald-500 pb-2">Send a Message</h3>
+            <h3 className="text-xl font-mono font-bold uppercase tracking-wider mb-8 text-gray-900 dark:text-white border-b-2 border-gray-900 dark:border-purple-500 pb-2">Send a Message</h3>
 
             {status.succeeded ? (
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="bg-brand-green/10 text-brand-green p-6 rounded-xl border border-brand-green/20 text-center"
+                className="bg-brand-purple/10 text-brand-purple p-6 rounded-xl border border-brand-purple/20 text-center"
               >
                 <p className="font-semibold text-lg mb-2">Message Sent!</p>
                 <p className="text-gray-600 dark:text-gray-400">Thanks for reaching out. I'll get back to you shortly.</p>
                 <button
                   onClick={() => setStatus({ submitting: false, succeeded: false, errors: [] })}
-                  className="mt-4 text-sm font-medium underline hover:text-brand-green-dark"
+                  className="mt-4 text-sm font-medium underline hover:text-brand-purple-dark"
                 >
                   Send another message
                 </button>
@@ -187,7 +187,7 @@ const Contact = () => {
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     required
                     disabled={status.submitting}
-                    className="w-full px-4 py-3.5 bg-[#f4f4f0] dark:bg-[#0a0a0a] border-2 border-gray-900 dark:border-gray-600 text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none focus:border-emerald-500 shadow-[4px_4px_0px_rgba(17,24,39,1)] dark:shadow-[4px_4px_0px_rgba(16,185,129,0.2)] focus:shadow-[6px_6px_0px_rgba(17,24,39,1)] dark:focus:shadow-[6px_6px_0px_rgba(16,185,129,0.5)] transition-all font-mono disabled:opacity-50 rounded-none terminal-cursor-focus"
+                    className="w-full px-4 py-3.5 bg-[#f4f4f0] dark:bg-black border-2 border-gray-900 dark:border-gray-600 text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 shadow-[4px_4px_0px_rgba(17,24,39,1)] dark:shadow-[4px_4px_0px_rgba(168,85,247,0.2)] focus:shadow-[6px_6px_0px_rgba(17,24,39,1)] dark:focus:shadow-[6px_6px_0px_rgba(168,85,247,0.5)] transition-all font-mono disabled:opacity-50 rounded-none terminal-cursor-focus"
                     placeholder="Identify yourself..."
                   />
                 </div>
@@ -203,7 +203,7 @@ const Contact = () => {
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     required
                     disabled={status.submitting}
-                    className="w-full px-4 py-3.5 bg-[#f4f4f0] dark:bg-[#0a0a0a] border-2 border-gray-900 dark:border-gray-600 text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none focus:border-emerald-500 shadow-[4px_4px_0px_rgba(17,24,39,1)] dark:shadow-[4px_4px_0px_rgba(16,185,129,0.2)] focus:shadow-[6px_6px_0px_rgba(17,24,39,1)] dark:focus:shadow-[6px_6px_0px_rgba(16,185,129,0.5)] transition-all font-mono disabled:opacity-50 rounded-none terminal-cursor-focus"
+                    className="w-full px-4 py-3.5 bg-[#f4f4f0] dark:bg-black border-2 border-gray-900 dark:border-gray-600 text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 shadow-[4px_4px_0px_rgba(17,24,39,1)] dark:shadow-[4px_4px_0px_rgba(168,85,247,0.2)] focus:shadow-[6px_6px_0px_rgba(17,24,39,1)] dark:focus:shadow-[6px_6px_0px_rgba(168,85,247,0.5)] transition-all font-mono disabled:opacity-50 rounded-none terminal-cursor-focus"
                     placeholder="your.email@mainframe.com"
                   />
                 </div>
@@ -219,7 +219,7 @@ const Contact = () => {
                     required
                     rows={5}
                     disabled={status.submitting}
-                    className="w-full px-4 py-3.5 bg-[#f4f4f0] dark:bg-[#0a0a0a] border-2 border-gray-900 dark:border-gray-600 text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none focus:border-emerald-500 shadow-[4px_4px_0px_rgba(17,24,39,1)] dark:shadow-[4px_4px_0px_rgba(16,185,129,0.2)] focus:shadow-[6px_6px_0px_rgba(17,24,39,1)] dark:focus:shadow-[6px_6px_0px_rgba(16,185,129,0.5)] transition-all font-mono disabled:opacity-50 resize-none rounded-none terminal-cursor-focus"
+                    className="w-full px-4 py-3.5 bg-[#f4f4f0] dark:bg-black border-2 border-gray-900 dark:border-gray-600 text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 shadow-[4px_4px_0px_rgba(17,24,39,1)] dark:shadow-[4px_4px_0px_rgba(168,85,247,0.2)] focus:shadow-[6px_6px_0px_rgba(17,24,39,1)] dark:focus:shadow-[6px_6px_0px_rgba(168,85,247,0.5)] transition-all font-mono disabled:opacity-50 resize-none rounded-none terminal-cursor-focus"
                     placeholder="Enter message..."
                   />
                 </div>
@@ -259,7 +259,7 @@ const Contact = () => {
         </div>
 
         {/* Retro Marquee Section */}
-        <div className="mt-24 overflow-hidden border-y-4 border-gray-900 dark:border-emerald-500 bg-emerald-400 dark:bg-emerald-500/10 py-4 -mx-4 sm:-mx-6 lg:-mx-8">
+        <div className="mt-24 overflow-hidden border-y-4 border-gray-900 dark:border-purple-500 bg-purple-400 dark:bg-purple-500/10 py-4 -mx-4 sm:-mx-6 lg:-mx-8">
           <motion.div
             className="flex whitespace-nowrap gap-8 items-center"
             animate={{ x: ["0%", "-50%"] }}
@@ -271,10 +271,10 @@ const Contact = () => {
           >
             {[...Array(10)].map((_, i) => (
               <div key={i} className="flex items-center gap-8">
-                <span className="text-4xl font-mono font-black text-gray-900 dark:text-emerald-500 tracking-widest uppercase">
-                  HOZAIFA ALI
+                <span className="text-4xl font-mono font-black text-gray-900 dark:text-purple-500 tracking-widest uppercase">
+                  Sameep Sharma
                 </span>
-                <span className="text-4xl font-mono text-gray-900 dark:text-emerald-500">
+                <span className="text-4xl font-mono text-gray-900 dark:text-purple-500">
                   ✦
                 </span>
               </div>

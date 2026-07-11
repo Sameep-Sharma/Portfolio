@@ -6,7 +6,7 @@ const HeroSocials = () => {
         {
             name: 'GitHub',
             icon: Github,
-            url: 'https://github.com/hozi8-web3',
+            url: 'https://github.com/Sameep-Sharma',
             color: 'hover:text-[#2dba4e]',
             bg: 'hover:bg-[#2dba4e]/10',
             border: 'hover:border-[#2dba4e]/50'
@@ -14,7 +14,7 @@ const HeroSocials = () => {
         {
             name: 'LinkedIn',
             icon: Linkedin,
-            url: 'https://pk.linkedin.com/in/m-hozaifa-ali',
+            url: 'https://www.linkedin.com/in/sameep-sharma-39a676374/',
             color: 'hover:text-[#0077b5]',
             bg: 'hover:bg-[#0077b5]/10',
             border: 'hover:border-[#0077b5]/50'
@@ -22,7 +22,7 @@ const HeroSocials = () => {
         {
             name: 'Email',
             icon: Mail,
-            url: 'mailto:hozaifaa095@gmail.com',
+            url: 'mailto:sharmasameep94@gmail.com',
             color: 'hover:text-[#ea4335]',
             bg: 'hover:bg-[#ea4335]/10',
             border: 'hover:border-[#ea4335]/50'

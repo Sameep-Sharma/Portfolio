@@ -37,7 +37,7 @@ const Hero = () => {
       {/* Subtle background pattern */}
       <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05]">
         <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 2px 2px, rgba(16, 185, 129, 0.4) 1px, transparent 0)`,
+          backgroundImage: `radial-gradient(circle at 2px 2px, rgba(168, 85, 247, 0.4) 1px, transparent 0)`,
           backgroundSize: '32px 32px'
         }} />
       </div>
@@ -56,7 +56,7 @@ const Hero = () => {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
-                className="text-brand-green font-mono text-xs tracking-[0.2em] uppercase font-medium"
+                className="text-brand-purple font-mono text-xs tracking-[0.2em] uppercase font-medium"
               >
                 <ScrambleText text="Software Engineer" delay={500} />
               </motion.p>
@@ -69,10 +69,10 @@ const Hero = () => {
               >
                 <span className="block glitch-hover w-fit" data-text="Hi, I'm">Hi, I'm</span>
                 <span className="block mt-2 relative z-20">
-                  {"Hozaifa Ali".split('').map((letter, index) => (
+                  {"Sameep Sharma".split('').map((letter, index) => (
                     <motion.span
                       key={index}
-                      className="inline-block text-brand-green cursor-grab active:cursor-grabbing relative"
+                      className="inline-block text-brand-purple cursor-grab active:cursor-grabbing relative"
                       drag
                       dragSnapToOrigin
                       dragElastic={0.2}
@@ -88,7 +88,7 @@ const Hero = () => {
             </div>
 
             <TextReveal
-              text="Software Engineering student at UET Lahore, specializing in full-stack development and Web3 technologies. I build scalable applications and innovative blockchain solutions."
+              text="Information Science and Engg. student at SIT Tumakuru, specializing in full-stack development and Problem Solving. I build scalable applications and Solve Problems for fun."
               className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-xl"
               delay={5}
             />

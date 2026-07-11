@@ -11,7 +11,7 @@ interface Repository {
   html_url: string
   stars: number
   forks: number
-  pushed_at: string
+  pushed_at: string | null
   visibility: string
 }
 
@@ -27,29 +27,18 @@ const Projects = ({ githubData }: ProjectsProps) => {
       .filter((repo) => repo.visibility === 'public' && repo.description)
       .slice(0, 3),
     {
-      name: 'Enterprise Dashboard Platform',
-      full_name: 'hozi8-web3/enterprise-dashboard',
-      description: 'A comprehensive enterprise dashboard with real-time analytics, user management, and advanced reporting features. Built with React, TypeScript, and microservices architecture.',
-      language: 'TypeScript',
-      homepage: 'https://enterprise-dashboard-demo.vercel.app',
-      html_url: 'https://github.com/hozi8-web3/enterprise-dashboard',
-      stars: 12,
-      forks: 3,
-      pushed_at: new Date().toISOString(),
+      name: 'Card-Game',
+      full_name: 'Sameep-Sharma/Card-Game',
+      description: 'A card game made in React.js',
+      language: 'JavaScript',
+      homepage: null,
+      html_url: 'https://github.com/Sameep-Sharma/Card-Game',
+      stars: 0,
+      forks: 0,
+      pushed_at: null,
       visibility: 'public',
     },
-    {
-      name: 'AI-Powered Code Review System',
-      full_name: 'hozi8-web3/ai-code-review',
-      description: 'An intelligent code review platform that uses machine learning to analyze code quality, suggest improvements, and detect potential bugs. Integrates with GitHub and GitLab.',
-      language: 'Python',
-      homepage: 'https://ai-code-review.vercel.app',
-      html_url: 'https://github.com/hozi8-web3/ai-code-review',
-      stars: 28,
-      forks: 7,
-      pushed_at: new Date().toISOString(),
-      visibility: 'public',
-    },
+
   ]
 
   const getLanguageColor = (language: string | null) => {
@@ -61,7 +50,7 @@ const Projects = ({ githubData }: ProjectsProps) => {
       CSS: '#1572b6',
       Solidity: '#363636',
     }
-    return colors[language || ''] || '#10b981'
+    return colors[language || ''] || '#a855f7'
   }
 
   const containerRef = useRef<HTMLElement>(null)
@@ -88,7 +77,7 @@ const Projects = ({ githubData }: ProjectsProps) => {
       {/* Background Parallax Element */}
       <motion.div
         style={{ y: bgY }}
-        className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-brand-green/5 rounded-full blur-[100px] -z-10 pointer-events-none"
+        className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-brand-purple/5 rounded-full blur-[100px] -z-10 pointer-events-none"
       />
 
       <div className="container mx-auto px-4 sm:px-6 max-w-7xl relative z-10">
@@ -102,9 +91,9 @@ const Projects = ({ githubData }: ProjectsProps) => {
         >
           <div className="flex items-center gap-4 mb-6">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-mono font-bold text-gray-900 dark:text-white tracking-widest uppercase text-shadow-retro">
-              Featured <span className="text-emerald-500">Projects</span>
+              Featured <span className="text-purple-500">Projects</span>
             </h2>
-            <div className="h-1 flex-1 max-w-24 bg-gray-900 dark:bg-emerald-500" />
+            <div className="h-1 flex-1 max-w-24 bg-gray-900 dark:bg-purple-500" />
           </div>
           <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-4xl">
             A selection of projects showcasing my expertise in full-stack development, Web3 technologies, and modern web applications.
@@ -131,20 +120,20 @@ const Projects = ({ githubData }: ProjectsProps) => {
                 dragElastic={0.1}
                 whileDrag={{ scale: 1.02, zIndex: 50, cursor: "grabbing" }}
               >
-                <div className={`h-full ${!isMobile ? 'cursor-grab active:cursor-grabbing' : ''} border-4 border-gray-900 dark:border-emerald-500 bg-[#f4f4f0] dark:bg-[#0a0a0a] shadow-[8px_8px_0px_rgba(17,24,39,1)] dark:shadow-[8px_8px_0px_rgba(16,185,129,1)] flex flex-col transition-shadow hover:shadow-[12px_12px_0px_rgba(17,24,39,1)] dark:hover:shadow-[12px_12px_0px_rgba(16,185,129,1)]`}>
+                <div className={`h-full ${!isMobile ? 'cursor-grab active:cursor-grabbing' : ''} border-4 border-gray-900 dark:border-purple-500 bg-[#f4f4f0] dark:bg-black shadow-[8px_8px_0px_rgba(17,24,39,1)] dark:shadow-[8px_8px_0px_rgba(168,85,247,1)] flex flex-col transition-shadow hover:shadow-[12px_12px_0px_rgba(17,24,39,1)] dark:hover:shadow-[12px_12px_0px_rgba(168,85,247,1)]`}>
 
                   {/* Retro Window Title Bar */}
-                  <div className="h-8 border-b-4 border-gray-900 dark:border-emerald-500 bg-gray-200 dark:bg-emerald-500/10 flex items-center px-3 justify-between pointer-events-none">
+                  <div className="h-8 border-b-4 border-gray-900 dark:border-purple-500 bg-gray-200 dark:bg-purple-500/10 flex items-center px-3 justify-between pointer-events-none">
                     <div className="flex gap-2 items-center">
-                      <div className="h-3 w-3 border-2 border-gray-900 dark:border-emerald-500 bg-[#f4f4f0] dark:bg-transparent" />
-                      <span className="text-[10px] font-mono font-bold text-gray-900 dark:text-emerald-500 tracking-widest uppercase">
+                      <div className="h-3 w-3 border-2 border-gray-900 dark:border-purple-500 bg-[#f4f4f0] dark:bg-transparent" />
+                      <span className="text-[10px] font-mono font-bold text-gray-900 dark:text-purple-500 tracking-widest uppercase">
                         {project.name.substring(0, 15).replace(/\s+/g, '_')}.EXE
                       </span>
                     </div>
                     <div className="flex gap-1.5 pointer-events-auto">
-                      <button className="w-3.5 h-3.5 border-2 border-gray-900 dark:border-emerald-500 hover:bg-gray-400 dark:hover:bg-emerald-500/50 transition-colors" aria-label="Minimize" />
-                      <button className="w-3.5 h-3.5 border-2 border-gray-900 dark:border-emerald-500 hover:bg-gray-400 dark:hover:bg-emerald-500/50 transition-colors" aria-label="Maximize" />
-                      <button className="w-3.5 h-3.5 border-2 border-gray-900 dark:border-emerald-500 bg-red-400 hover:bg-red-500 transition-colors flex items-center justify-center" aria-label="Close">
+                      <button className="w-3.5 h-3.5 border-2 border-gray-900 dark:border-purple-500 hover:bg-gray-400 dark:hover:bg-purple-500/50 transition-colors" aria-label="Minimize" />
+                      <button className="w-3.5 h-3.5 border-2 border-gray-900 dark:border-purple-500 hover:bg-gray-400 dark:hover:bg-purple-500/50 transition-colors" aria-label="Maximize" />
+                      <button className="w-3.5 h-3.5 border-2 border-gray-900 dark:border-purple-500 bg-red-400 hover:bg-red-500 transition-colors flex items-center justify-center" aria-label="Close">
                         <span className="text-[8px] font-bold text-gray-900 leading-none block rotate-45 mb-[1px]">+</span>
                       </button>
                     </div>
@@ -156,7 +145,7 @@ const Projects = ({ githubData }: ProjectsProps) => {
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex-1 min-w-0 pr-4">
                         <div
-                          className={`${isFeatured ? 'text-2xl md:text-3xl' : 'text-lg'} font-mono font-bold uppercase tracking-tight text-gray-900 dark:text-white mb-3 group-hover:text-emerald-500 transition-colors terminal-cursor-focus underline decoration-emerald-500/30 underline-offset-4`}
+                          className={`${isFeatured ? 'text-2xl md:text-3xl' : 'text-lg'} font-mono font-bold uppercase tracking-tight text-gray-900 dark:text-white mb-3 group-hover:text-purple-500 transition-colors terminal-cursor-focus underline decoration-purple-500/30 underline-offset-4`}
                         >
                           {project.name}
                         </div>
@@ -178,7 +167,7 @@ const Projects = ({ githubData }: ProjectsProps) => {
                             href={project.html_url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="p-2 rounded-full text-gray-500 hover:text-brand-green hover:bg-brand-green/10 transition-colors"
+                            className="p-2 rounded-full text-gray-500 hover:text-brand-purple hover:bg-brand-purple/10 transition-colors"
                             aria-label="GitHub"
                           >
                             <Github size={isFeatured ? 24 : 20} />
@@ -230,10 +219,10 @@ const Projects = ({ githubData }: ProjectsProps) => {
           className="text-center mt-16"
         >
           <a
-            href="https://github.com/hozi8-web3"
+            href="https://github.com/Sameep-Sharma"
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-2 text-brand-green hover:text-brand-green-dark font-semibold transition-colors"
+            className="group inline-flex items-center gap-2 text-brand-purple hover:text-brand-purple-dark font-semibold transition-colors"
           >
             <span>View All Projects on GitHub</span>
             <ExternalLink size={18} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />

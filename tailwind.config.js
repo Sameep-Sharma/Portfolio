@@ -9,15 +9,15 @@ export default {
     extend: {
       colors: {
         brand: {
-          green: '#10b981',
-          'green-dark': '#059669',
+          purple: '#a855f7',
+          'purple-dark': '#9333ea',
         },
       },
       boxShadow: {
         'premium-glass': '0 8px 32px 0 rgba(0, 0, 0, 0.05)',
         'premium-glass-dark': '0 8px 32px 0 rgba(0, 0, 0, 0.4)',
-        'premium-hover': '0 20px 40px -10px rgba(16, 185, 129, 0.15)',
-        'premium-hover-dark': '0 20px 40px -10px rgba(16, 185, 129, 0.1)',
+        'premium-hover': '0 20px 40px -10px rgba(168, 85, 247, 0.15)',
+        'premium-hover-dark': '0 20px 40px -10px rgba(168, 85, 247, 0.1)',
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',
@@ -37,8 +37,8 @@ export default {
           '50%': { transform: 'translateY(-20px)' },
         },
         glow: {
-          '0%': { boxShadow: '0 0 5px #10b981, 0 0 10px #10b981' },
-          '100%': { boxShadow: '0 0 10px #10b981, 0 0 20px #10b981, 0 0 30px #10b981' },
+          '0%': { boxShadow: '0 0 5px #a855f7, 0 0 10px #a855f7' },
+          '100%': { boxShadow: '0 0 10px #a855f7, 0 0 20px #a855f7, 0 0 30px #a855f7' },
         },
         scroll: {
           '0%': { transform: 'translateX(0)' },

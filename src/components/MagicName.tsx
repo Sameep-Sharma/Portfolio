@@ -12,7 +12,7 @@ const MagicName = () => {
             viewport={{ once: true }}
           >
             <span className="block relative z-20">
-              {"HOZAIFA ALI".split('').map((letter, index) => (
+              {"Sameep Sharma".split('').map((letter, index) => (
                 <motion.span
                   key={index}
                   className="inline-block relative cursor-grab active:cursor-grabbing bg-gradient-to-b from-blue-400 via-blue-600 to-indigo-600 bg-clip-text text-transparent transform-gpu"

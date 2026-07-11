@@ -96,14 +96,14 @@ export default function AsciiImage({ imageUrl, cols = 80, bare = false }: AsciiI
                 style={{ perspective: 1000 }}
             >
                 {loading ? (
-                    <div className="text-emerald-500 font-mono text-xs animate-pulse flex flex-col items-center gap-2">
-                        <div className="w-6 h-6 border-b-2 border-emerald-500 rounded-full animate-spin" />
+                    <div className="text-purple-500 font-mono text-xs animate-pulse flex flex-col items-center gap-2">
+                        <div className="w-6 h-6 border-b-2 border-purple-500 rounded-full animate-spin" />
                         <span>PROCESSING_IMAGE</span>
                     </div>
                 ) : (
                     <motion.div
                         style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
-                        className="font-mono text-[5px] sm:text-[6.5px] md:text-[8px] lg:text-[10px] leading-[0.9] tracking-[0.1em] text-gray-900 dark:text-emerald-500 whitespace-pre text-center select-none relative z-10 group-hover:text-emerald-400"
+                        className="font-mono text-[5px] sm:text-[6.5px] md:text-[8px] lg:text-[10px] leading-[0.9] tracking-[0.1em] text-gray-900 dark:text-purple-500 whitespace-pre text-center select-none relative z-10 group-hover:text-purple-400"
                     >
                         {asciiArt.join('\n')}
                     </motion.div>
@@ -111,7 +111,7 @@ export default function AsciiImage({ imageUrl, cols = 80, bare = false }: AsciiI
                 <motion.div
                     animate={{ top: ['0%', '100%'] }}
                     transition={{ duration: 4, repeat: Infinity, ease: 'linear' }}
-                    className="absolute left-0 right-0 h-8 bg-gradient-to-b from-transparent to-emerald-500/20 z-20 pointer-events-none border-b border-emerald-500/50 mix-blend-overlay"
+                    className="absolute left-0 right-0 h-8 bg-gradient-to-b from-transparent to-purple-500/20 z-20 pointer-events-none border-b border-purple-500/50 mix-blend-overlay"
                 />
             </div>
         );
@@ -119,36 +119,36 @@ export default function AsciiImage({ imageUrl, cols = 80, bare = false }: AsciiI
 
     // Standalone mode: full window chrome
     if (error) return (
-        <div className="w-full aspect-square flex items-center justify-center bg-[#0a0a0a] border-4 border-gray-900 dark:border-red-500 shadow-[8px_8px_0px_0px_rgba(239,68,68,0.5)]">
+        <div className="w-full aspect-square flex items-center justify-center bg-black border-4 border-gray-900 dark:border-red-500 shadow-[8px_8px_0px_0px_rgba(239,68,68,0.5)]">
             <p className="text-red-500 font-mono text-sm uppercase">ERR_IMG_LOAD</p>
         </div>
     );
 
     return (
         <div
-            className="w-full aspect-square flex items-center justify-center bg-[#f4f4f0] dark:bg-[#0a0a0a] border-4 border-gray-900 dark:border-emerald-500 shadow-[8px_8px_0px_0px_rgba(17,24,39,1)] dark:shadow-[8px_8px_0px_0px_rgba(16,185,129,1)] overflow-hidden relative cursor-crosshair group"
+            className="w-full aspect-square flex items-center justify-center bg-[#f4f4f0] dark:bg-black border-4 border-gray-900 dark:border-purple-500 shadow-[8px_8px_0px_0px_rgba(17,24,39,1)] dark:shadow-[8px_8px_0px_0px_rgba(168,85,247,1)] overflow-hidden relative cursor-crosshair group"
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
             style={{ perspective: 1000 }}
         >
-            <div className="absolute top-0 left-0 right-0 h-6 sm:h-8 border-b-4 border-gray-900 dark:border-emerald-500 bg-gray-200 dark:bg-emerald-500/10 flex items-center px-2 sm:px-3 justify-between z-20 pointer-events-none">
+            <div className="absolute top-0 left-0 right-0 h-6 sm:h-8 border-b-4 border-gray-900 dark:border-purple-500 bg-gray-200 dark:bg-purple-500/10 flex items-center px-2 sm:px-3 justify-between z-20 pointer-events-none">
                 <div className="flex gap-2 items-center">
-                    <div className="h-2 w-2 sm:h-3 sm:w-3 border-2 border-gray-900 dark:border-emerald-500 bg-[#f4f4f0] dark:bg-transparent" />
-                    <span className="text-[8px] sm:text-[10px] font-mono font-bold text-gray-900 dark:text-emerald-500 tracking-widest uppercase">
+                    <div className="h-2 w-2 sm:h-3 sm:w-3 border-2 border-gray-900 dark:border-purple-500 bg-[#f4f4f0] dark:bg-transparent" />
+                    <span className="text-[8px] sm:text-[10px] font-mono font-bold text-gray-900 dark:text-purple-500 tracking-widest uppercase">
                         ASCII_RENDERER.EXE
                     </span>
                 </div>
             </div>
 
             {loading ? (
-                <div className="text-emerald-500 font-mono text-xs animate-pulse pt-8 flex flex-col items-center gap-2">
-                    <div className="w-6 h-6 border-b-2 border-emerald-500 rounded-full animate-spin" />
+                <div className="text-purple-500 font-mono text-xs animate-pulse pt-8 flex flex-col items-center gap-2">
+                    <div className="w-6 h-6 border-b-2 border-purple-500 rounded-full animate-spin" />
                     <span>PROCESSING_IMAGE</span>
                 </div>
             ) : (
                 <motion.div
                     style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
-                    className="font-mono text-[5px] sm:text-[6.5px] md:text-[8px] lg:text-[10px] leading-[0.9] tracking-[0.1em] text-gray-900 dark:text-emerald-500 whitespace-pre text-center select-none pt-8 relative z-10 group-hover:text-emerald-400"
+                    className="font-mono text-[5px] sm:text-[6.5px] md:text-[8px] lg:text-[10px] leading-[0.9] tracking-[0.1em] text-gray-900 dark:text-purple-500 whitespace-pre text-center select-none pt-8 relative z-10 group-hover:text-purple-400"
                 >
                     {asciiArt.join('\n')}
                 </motion.div>
@@ -157,7 +157,7 @@ export default function AsciiImage({ imageUrl, cols = 80, bare = false }: AsciiI
             <motion.div
                 animate={{ top: ['0%', '100%'] }}
                 transition={{ duration: 4, repeat: Infinity, ease: 'linear' }}
-                className="absolute left-0 right-0 h-8 bg-gradient-to-b from-transparent to-emerald-500/20 z-20 pointer-events-none border-b border-emerald-500/50 mix-blend-overlay"
+                className="absolute left-0 right-0 h-8 bg-gradient-to-b from-transparent to-purple-500/20 z-20 pointer-events-none border-b border-purple-500/50 mix-blend-overlay"
             />
         </div>
     );

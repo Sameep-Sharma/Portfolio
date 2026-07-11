@@ -15,13 +15,13 @@ interface GitHubProfile {
     location: string;
 }
 
-const SocialBadges = () => {
+const SocialBadges = () => {    
     const [githubData, setGithubData] = useState<GitHubProfile | null>(null);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         // Fetch GitHub Data
-        fetch('https://api.github.com/users/hozi8-web3')
+        fetch('https://api.github.com/users/Sameep-Sharma')
             .then(res => res.json())
             .then(data => {
                 setGithubData(data);
@@ -34,11 +34,11 @@ const SocialBadges = () => {
     }, []);
 
     const linkedinProfile = {
-        name: "Muhammad Hozaifa Ali",
-        title: "Software Engineer | Full Stack Developer",
-        location: "Lahore, Pakistan",
-        url: "https://pk.linkedin.com/in/m-hozaifa-ali",
-        avatar: githubData?.avatar_url || "https://dummyimage.com/400x400/0077b5/ffffff&text=MA" // Fallback to initial if GitHub not loaded
+        name: "Sameep Sharma",
+        title: "Sophomore| Web Dev | DSA",
+        location: "Tumakuru,Karnataka,India",
+        url: "https://www.linkedin.com/in/sameep-sharma-39a676374/",
+        avatar: "6677af9b46a5b1d9d281897dee91b79d.jpeg"
     };
 
     return (
@@ -51,7 +51,7 @@ const SocialBadges = () => {
                 transition={{ duration: 0.5 }}
                 className="md:flex-1 h-[300px]"
             >
-                <SpotlightCard className="h-full group relative overflow-hidden rounded-xl border border-gray-200 dark:border-white/10 bg-white dark:bg-gray-900 shadow-lg hover:shadow-xl transition-all duration-300" spotlightColor="rgba(59, 130, 246, 0.2)">
+                <SpotlightCard className="h-full group relative overflow-hidden rounded-xl border border-gray-200 dark:border-white/10 bg-white dark:bg-black shadow-lg hover:shadow-xl transition-all duration-300" spotlightColor="rgba(59, 130, 246, 0.2)">
                     {/* Banner */}
                     <div className="h-24 bg-gradient-to-r from-blue-700 to-blue-500 relative">
                         <div className="absolute top-4 right-4 text-white/20">
@@ -107,8 +107,8 @@ const SocialBadges = () => {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="md:flex-1 h-[300px]"
             >
-                <SpotlightCard className="h-full group relative overflow-hidden rounded-xl border border-gray-200 dark:border-white/10 bg-white dark:bg-gray-900 shadow-lg hover:shadow-xl transition-all duration-300" spotlightColor="rgba(16, 185, 129, 0.2)">
-                    <div className="absolute inset-0 bg-brand-green/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                <SpotlightCard className="h-full group relative overflow-hidden rounded-xl border border-gray-200 dark:border-white/10 bg-white dark:bg-black shadow-lg hover:shadow-xl transition-all duration-300" spotlightColor="rgba(168, 85, 247, 0.2)">
+                    <div className="absolute inset-0 bg-brand-purple/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
                     <div className="p-6 h-full flex flex-col justify-between">
                         {loading ? (
@@ -137,10 +137,10 @@ const SocialBadges = () => {
                                         <img
                                             src={githubData.avatar_url}
                                             alt={githubData.name}
-                                            className="w-16 h-16 rounded-full border-2 border-brand-green shadow-lg shadow-brand-green/20"
+                                            className="w-16 h-16 rounded-full border-2 border-brand-purple shadow-lg shadow-brand-purple/20"
                                         />
                                         <div className="min-w-0">
-                                            <h3 className="text-gray-900 dark:text-white font-bold text-lg group-hover:text-brand-green transition-colors line-clamp-1 truncate">
+                                            <h3 className="text-gray-900 dark:text-white font-bold text-lg group-hover:text-brand-purple transition-colors line-clamp-1 truncate">
                                                 {githubData.name || githubData.login}
                                             </h3>
                                             <p className="text-gray-500 dark:text-gray-400 text-sm truncate">@{githubData.login}</p>
@@ -155,25 +155,25 @@ const SocialBadges = () => {
 
                                 <div className="grid grid-cols-3 gap-2 py-3 border-t border-gray-200 dark:border-white/10 border-b mb-3">
                                     <div className="text-center">
-                                        <div className="text-brand-green font-bold text-lg">{githubData.public_repos}</div>
+                                        <div className="text-brand-purple font-bold text-lg">{githubData.public_repos}</div>
                                         <div className="text-xs text-gray-500 uppercase tracking-wider text-[10px]">Repos</div>
                                     </div>
                                     <div className="text-center border-l border-gray-200 dark:border-white/10">
-                                        <div className="text-brand-green font-bold text-lg">{githubData.followers}</div>
+                                        <div className="text-brand-purple font-bold text-lg">{githubData.followers}</div>
                                         <div className="text-xs text-gray-500 uppercase tracking-wider text-[10px]">Followers</div>
                                     </div>
                                     <div className="text-center border-l border-gray-200 dark:border-white/10">
-                                        <div className="text-brand-green font-bold text-lg">{githubData.following}</div>
+                                        <div className="text-brand-purple font-bold text-lg">{githubData.following}</div>
                                         <div className="text-xs text-gray-500 uppercase tracking-wider text-[10px]">Following</div>
                                     </div>
                                 </div>
 
                                 <div className="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400 mt-auto">
                                     <div className="flex items-center gap-1.5 min-w-0">
-                                        <MapPin size={14} className="text-brand-green flex-shrink-0" />
+                                        <MapPin size={14} className="text-brand-purple flex-shrink-0" />
                                         <span className="truncate max-w-[100px]">{githubData.location || "Earth"}</span>
                                     </div>
-                                    <div className="flex items-center gap-1 group-hover:text-brand-green transition-colors flex-shrink-0">
+                                    <div className="flex items-center gap-1 group-hover:text-brand-purple transition-colors flex-shrink-0">
                                         Visit Profile <ExternalLink size={14} />
                                     </div>
                                 </div>

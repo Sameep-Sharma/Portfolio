@@ -5,27 +5,24 @@ import SkillsMarquee from './SkillsMarquee'
 
 const About = () => {
   const skills = [
-    { category: 'Frontend', items: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Framer Motion'] },
-    { category: 'Backend', items: ['Node.js', 'Express', 'REST APIs', 'GraphQL'] },
-    { category: 'Database', items: ['MongoDB', 'PostgreSQL', 'Redis'] },
-    { category: 'Web3', items: ['Solidity', 'Ethereum', 'Smart Contracts', 'Web3.js'] },
-    { category: 'Tools', items: ['Git', 'Docker', 'AWS', 'CI/CD', 'Jest'] },
+    { category: 'Frontend', items: ['React', 'TypeScript', 'Next.js', 'Remix.js'] },
+    { category: 'Backend', items: ['Node.js', 'Express', 'REST APIs'] },
+    { category: 'Database', items: ['MongoDB', 'PostgreSQL', 'Supabase'] },
+    { category: 'Tools', items: ['Git', 'Docker', 'AWS', 'Vs Code', 'Postman'] },
   ]
 
   const experience = [
     {
-      icon: <GraduationCap className="text-brand-green" size={22} />,
-      title: 'Software Engineering',
-      institution: 'UET Lahore',
+      icon: <GraduationCap className="text-brand-purple" size={22} />,
+      title: 'Information Science and Engineering',
+      institution: 'Siddaganga Institute of Technology',
       period: 'Present',
-      description: 'Pursuing Bachelor\'s degree in Software Engineering with focus on software architecture, algorithms, and modern development practices.',
+      description: 'Pursuing Bachelor\'s degree in Information Science and Engineering with focus on software architecture, algorithms, and modern development practices.',
     },
     {
-      icon: <Code className="text-brand-green" size={22} />,
+      icon: <Code className="text-brand-purple" size={22} />,
       title: 'Full-Stack Developer',
-      institution: 'Freelance',
-      period: '2023 - Present',
-      description: 'Developing scalable web applications and decentralized solutions. Specialized in React, Node.js, and blockchain technologies.',
+      description: 'Developing scalable web applications and decentralized solutions. Specialized in React, Node.js, and Full-Stack technologies.',
     },
   ]
 
@@ -45,7 +42,7 @@ const About = () => {
       {/* Parallax Background Shape */}
       <motion.div
         style={{ y: bgY }}
-        className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-green/5 rounded-full blur-[120px] -z-10 pointer-events-none"
+        className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-purple/5 rounded-full blur-[120px] -z-10 pointer-events-none"
       />
 
       <div className="container mx-auto px-4 sm:px-6 max-w-7xl relative z-10">
@@ -58,14 +55,14 @@ const About = () => {
         >
           <div className="flex items-center gap-4 mb-6">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-mono font-bold text-gray-900 dark:text-white tracking-widest uppercase text-shadow-retro">
-              About <span className="text-emerald-500">Me</span>
+              About <span className="text-purple-500">Me</span>
             </h2>
-            <div className="h-1 flex-1 max-w-24 bg-gray-900 dark:bg-emerald-500" />
+            <div className="h-1 flex-1 max-w-24 bg-gray-900 dark:bg-purple-500" />
           </div>
           <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-4xl leading-relaxed">
-            I'm Hozaifa Ali, a Software Engineering student at UET Lahore with a passion for building
+            I'm Sameep Sharma, a Information Science and Engineering student at Siddaganga Institute of Technology with a passion for building
             innovative solutions. My expertise spans full-stack web development, with a particular
-            focus on Web3 technologies and modern React applications. I enjoy solving complex problems
+            focus on JS Frameworks and modern web technologies. I enjoy solving complex problems
             and creating user-centric applications that make a difference.
           </p>
         </motion.div>
@@ -89,13 +86,13 @@ const About = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.15, duration: 0.6 }}
-                  className="retro-card p-4 sm:p-6 border-l-8 border-gray-900 dark:border-emerald-500 group"
+                  className="retro-card p-4 sm:p-6 border-l-8 border-gray-900 dark:border-purple-500 group"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="p-3 bg-white dark:bg-[#0a0a0a] border-2 border-gray-900 dark:border-emerald-500 rounded-none flex-shrink-0 group-hover:-translate-y-1 transition-transform duration-300">{item.icon}</div>
+                    <div className="p-3 bg-white dark:bg-black border-2 border-gray-900 dark:border-purple-500 rounded-none flex-shrink-0 group-hover:-translate-y-1 transition-transform duration-300">{item.icon}</div>
                     <div className="flex-1 min-w-0">
                       <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-1.5 uppercase font-mono">{item.title}</h4>
-                      <p className="text-emerald-500 text-sm font-bold mb-2 uppercase tracking-wider">{item.institution} • {item.period}</p>
+                      <p className="text-purple-500 text-sm font-bold mb-2 uppercase tracking-wider">{item.institution} • {item.period}</p>
                       <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed font-mono">{item.description}</p>
                     </div>
                   </div>
@@ -122,16 +119,16 @@ const About = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1, duration: 0.6 }}
-                  className="retro-card p-4 sm:p-6 group hover:border-gray-900 dark:hover:border-emerald-400 transition-all duration-300"
+                  className="retro-card p-4 sm:p-6 group hover:border-gray-900 dark:hover:border-purple-400 transition-all duration-300"
                 >
-                  <h4 className="text-xs font-mono text-gray-900 dark:text-emerald-500 uppercase tracking-widest mb-4 font-bold border-b-2 border-gray-900 dark:border-emerald-500 pb-2">
+                  <h4 className="text-xs font-mono text-gray-900 dark:text-purple-500 uppercase tracking-widest mb-4 font-bold border-b-2 border-gray-900 dark:border-purple-500 pb-2">
                     {skillGroup.category}
                   </h4>
                   <div className="flex flex-wrap gap-3">
                     {skillGroup.items.map((skill) => (
                       <span
                         key={skill}
-                        className="px-3.5 py-1.5 bg-[#f4f4f0] dark:bg-[#111] border-2 border-gray-900 dark:border-gray-600 shadow-[2px_2px_0px_rgba(17,24,39,1)] text-sm font-mono font-bold text-gray-900 dark:text-gray-100 hover:-translate-y-1 hover:shadow-[4px_4px_0px_rgba(16,185,129,1)] hover:border-emerald-500 transition-all cursor-crosshair"
+                        className="px-3.5 py-1.5 bg-[#f4f4f0] dark:bg-black border-2 border-gray-900 dark:border-gray-600 shadow-[2px_2px_0px_rgba(17,24,39,1)] text-sm font-mono font-bold text-gray-900 dark:text-gray-100 hover:-translate-y-1 hover:shadow-[4px_4px_0px_rgba(168,85,247,1)] hover:border-purple-500 transition-all cursor-crosshair"
                       >
                         {skill}
                       </span>
@@ -165,12 +162,12 @@ const About = () => {
             ].map((item, index) => (
               <div key={index} className="space-y-3 group hover:-translate-y-1 transition-transform">
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="p-2 border-2 border-gray-900 dark:border-emerald-500 bg-emerald-400 text-gray-900 shadow-[2px_2px_0px_rgba(17,24,39,1)] group-hover:shadow-[4px_4px_0px_rgba(17,24,39,1)] transition-all">
+                  <div className="p-2 border-2 border-gray-900 dark:border-purple-500 bg-purple-400 text-gray-900 shadow-[2px_2px_0px_rgba(17,24,39,1)] group-hover:shadow-[4px_4px_0px_rgba(17,24,39,1)] transition-all">
                     <CheckCircle2 size={20} strokeWidth={3} />
                   </div>
                   <h4 className="font-mono font-bold text-gray-900 dark:text-white text-lg uppercase tracking-tight">{item.title}</h4>
                 </div>
-                <p className="text-gray-700 dark:text-gray-300 text-sm font-mono leading-relaxed border-l-2 border-emerald-500 pl-3 ml-5">{item.desc}</p>
+                <p className="text-gray-700 dark:text-gray-300 text-sm font-mono leading-relaxed border-l-2 border-purple-500 pl-3 ml-5">{item.desc}</p>
               </div>
             ))}
           </div>
