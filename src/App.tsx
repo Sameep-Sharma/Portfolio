@@ -8,7 +8,7 @@ import Contact from './components/Contact'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 import { githubData } from './data/githubData'
-
+import { Analytics } from "@vercel/analytics/next"
 import CustomCursor from './components/CustomCursor'
 import Preloader from './components/Preloader'
 
@@ -47,6 +47,7 @@ function App() {
       <Projects githubData={githubData} />
       <Contact />
       <Footer />
+      <Analytics />
     </div>
   )
 }
