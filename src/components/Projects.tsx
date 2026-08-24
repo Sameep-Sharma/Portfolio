@@ -27,6 +27,21 @@ const Projects = ({ githubData }: ProjectsProps) => {
       .filter((repo) => repo.visibility === 'public' && repo.description)
       .slice(0, 3),
     {
+      name: "Weather-App",
+      full_name: "Sameep-Sharma/Weather-App",
+      description: "Weather-App is a sleek, futuristic weather dashboard that provides real-time weather data, 5-day forecasts, and air quality information. It features animated backgrounds and weather effects that change based on current conditions and time of day.",
+      language: "JavaScript",
+      license: null,
+      homepage: "https://weather-app-ivory-31.vercel.app/",
+      html_url: "https://github.com/Sameep-Sharma/Weather-App",
+      stars: 0,
+      forks: 0,
+      pushed_at: null,
+      size_kb: 32,
+      topics: [],
+      visibility: "public"
+    },
+    {
       name: 'Card-Game',
       full_name: 'Sameep-Sharma/Card-Game',
       description: 'A card game made in React.js',

@@ -25,13 +25,13 @@ export const githubData = {
       visibility: "public"
     },
     {
-      name: "Blogging App",
-      full_name: "Sameep-Sharma/Blogging-App",
-      description: "Blogging-App is a backend project which was made while learning MERN stack. Although for Frontend it uses EJS for SSR.",
-      language: "JavaScript",
+      name: "Sark Official Website",
+      full_name: "Sameep-Sharma/Sark",
+      description: "Official website of Sark. Made with Next.js, TypeScript, TailwindCSS.",
+      language: "TypeScript",
       license: null,
-      homepage: null,
-      html_url: "https://github.com/Sameep-Sharma/Blogging-App",
+      homepage: "https://sark-opal.vercel.app",
+      html_url: "https://github.com/Sameep-Sharma/Sark",
       stars: 0,
       forks: 0,
       pushed_at: null,
@@ -40,20 +40,22 @@ export const githubData = {
       visibility: "public"
     },
     {
-      name: "Weather-App",
-      full_name: "Sameep-Sharma/Weather-App",
-      description: "Weather-App is a sleek, futuristic weather dashboard that provides real-time weather data, 5-day forecasts, and air quality information. It features animated backgrounds and weather effects that change based on current conditions and time of day.",
-      language: "JavaScript",
+      name: "Sportz",
+      full_name: "Sameep-Sharma/Sportz",
+      description: "Sportz is a real-time sports application built with React.js, Websockets(ws), Express.js, Neon and Drizzle ORM, Arcjet. It provides live scores, match details, and player statistics for various sports events.",
+      language: "JavaScript/TypeScript",
       license: null,
-      homepage: "https://weather-app-ivory-31.vercel.app/",
-      html_url: "https://github.com/Sameep-Sharma/Weather-App",
+      homepage: null,
+      html_url: "https://github.com/Sameep-Sharma/Sportz",
       stars: 0,
       forks: 0,
       pushed_at: null,
-      size_kb: 32,
+      size_kb: 813,
       topics: [],
       visibility: "public"
-    }
+    },
+    
+    
   ]
 }
 
