@@ -54,6 +54,21 @@ export const githubData = {
       topics: [],
       visibility: "public"
     },
+     {
+      name: "Second-Brain",
+      full_name: "Sameep-Sharma/Second-Brain",
+      description: "Second Brain is a memory management application built with React.js,Express.js, Mongo DB. You can add your important links from different places here and share your brain with anyone out there in this world.",
+      language: "TypeScript",
+      license: null,
+      homepage: null,
+      html_url: "https://github.com/Sameep-Sharma/Second-Brain",
+      stars: 0,
+      forks: 0,
+      pushed_at: null,
+      size_kb: 813,
+      topics: [],
+      visibility: "public"
+    },
     
     
   ]
